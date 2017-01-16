@@ -16,8 +16,10 @@ The data set has the following special structures:
   
 #4. Feature Selection:
   The features are understood to be assets owned by customers and during feature exploration, we found that customers who are richer/hold more assets/has higher balance/multiple transaction tend to be more likely to be unsatisfied. On the other side, customers who are in debt with the bank also tend to be unsatisfied while the majority of customers has zero records for holding/transferring balances. To amplify this intuition, we generated the following features:
-  zero_sums: number of total zeros, this reflects the number of assets/activity of accounts 
-  saldo_mean_ult/hace: the mean value of different assets in different time periods
+  
+  -zero_sums: number of total zeros, this reflects the number of assets/activity of accounts 
+  
+  -saldo_mean_ult/hace: the mean value of different assets in different time periods
   
   In practice, the Random Forest Classifier find these features, along with var3, var38, var15 to be among the top 10 most significant features in the model prediction. Even if we drop the other features relavent to 'saldo' or 'saldo_medio' variables, the performances remains the same and the model is simpler, more robust.
   
